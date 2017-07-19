@@ -7,9 +7,9 @@ require 'dotenv/load'
 
 hydra = Typhoeus::Hydra.new
 
-requests = 100.times.map do |i|
+requests = 1.times.map do |i|
   request = Typhoeus::Request.new(
-    "https://hicommon.freshservice.com/helpdesk/tickets/#{i+1}.json",
+    "https://hicommon.freshservice.com/helpdesk/tickets/#{4640}.json",
     headers: {
       'Content-Type' => 'application/json',
       'Authorization' => "Basic #{ENV['FRESHDESK_TOKEN']}"
